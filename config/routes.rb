@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "about", to: "about#index"
   # resource :about, only: [:index]
 
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
+
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 

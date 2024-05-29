@@ -21,6 +21,6 @@
   <%= form.button button_label, class: "btn btn-primary" %>
 
   <% if form.object.persisted? %>
-    <%= button_to "Delete", form.object, method: :delete, class: "btn btn-outline-danger", data: {confirm: "Are you sure?"} %>
+    <%= link_to "Delete", form.object, method: :delete, class: "btn btn-outline-danger", data: {confirm: "Are you sure?"} %>
   <% end %>
 <% end %>

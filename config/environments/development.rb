@@ -60,6 +60,8 @@ Rails.application.configure do
 
   # Highlight code that enqueued background job in logs.
   config.active_job.verbose_enqueue_logs = true
+  config.active_job.queue_adapter = :sidekiq
+  config.active_job.queue_name_prefix = "scheduled_tweets_development"
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
